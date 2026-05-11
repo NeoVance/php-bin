@@ -39,3 +39,4 @@ jobs:
         title: "Update CA file"
         commit-message: "Update CA file"
         base: main
+        token: ${{ secrets.PAT }}
