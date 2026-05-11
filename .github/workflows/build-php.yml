@@ -105,7 +105,9 @@ jobs:
 
       - shell: bash
         if: matrix.os == 'ubuntu-latest' || matrix.os == 'ubuntu-24.04-arm'
-        run: echo "SPC_BUILD_OS=linux" >> $GITHUB_ENV
+        run: |
+          echo "SPC_BUILD_OS=linux" >> $GITHUB_ENV
+          echo "SPC_TARGET=native-native-gnu.2.17" >> $GITHUB_ENV
 
       - name: Setup system PHP
         uses: shivammathur/setup-php@v2
@@ -155,7 +157,7 @@ jobs:
       - name: Build PHP
         run: |
           cd ../static-php-cli
-          ./bin/${{ env.SPC_BINARY }} build --build-cli "${{ env.PHP_EXTENSIONS }}" --with-libs="${{ env.PHP_LIBS }}" --debug
+          ./bin/${{ env.SPC_BINARY }} build --build-micro --build-cli "${{ env.PHP_EXTENSIONS }}" --with-libs="${{ env.PHP_LIBS }}" --debug --enable-zts
           cd ../php-bin
 
       - name: Get built PHP version
