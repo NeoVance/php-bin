@@ -1,1 +1,1 @@
-bcmath,bz2,ctype,curl,dom,fileinfo,filter,gd,iconv,intl,mbregex,mbstring,msgpack,opcache,parallel,pdo,pdo_sqlite,phar,protobuf,sockets,sodium,sqlite3,ssh2,tokenizer,xml,yaml,zip,zlib,ffi
+bcmath,bz2,ctype,curl,dom,fileinfo,filter,gd,iconv,mbregex,mbstring,msgpack,opcache,parallel,pdo,pdo_sqlite,phar,protobuf,sockets,sodium,sqlite3,ssh2,tokenizer,xml,yaml,zip,zlib,ffi
